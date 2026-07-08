@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>What You Want?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>What you want?</title>
 
-<!-- Load PP Neue Montreal -->
-<!--
-<link rel="stylesheet" href="fonts/pp-neue-montreal.css">
--->
+    <meta name="description" content="Get in touch with Irshad PK">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PP Neue Montreal -->
+    <!--
+    <link rel="stylesheet" href="fonts/pp-neue-montreal.css">
+    -->
 
 </head>
 
 <body>
 
-<div class="container">
+    <main class="hero">
 
-    <h1>What you want ?</h1>
+        <div class="container">
 
-    <form class="search-box">
+            <h1>
+                What you want<span>?</span>
+            </h1>
 
-        <input
-            type="text"
-            placeholder="Type something..."
-        >
+            <form id="contactForm" class="search-box">
 
-        <button type="submit">
-            Submit
-        </button>
+                <input
+                    type="text"
+                    id="message"
+                    name="message"
+                    placeholder="Type something..."
+                    autocomplete="off"
+                    required
+                >
 
-    </form>
+                <button
+                    type="submit"
+                    id="submitBtn">
 
-</div>
+                    Submit
+
+                </button>
+
+            </form>
+
+            <p class="status" id="status"></p>
+
+        </div>
+
+    </main>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
