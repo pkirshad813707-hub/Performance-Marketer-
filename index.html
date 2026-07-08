@@ -1,59 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do More</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Load your PP Neue Montreal font -->
-    <!-- Example:
-    <link rel="stylesheet" href="fonts/pp-neue-montreal.css">
-    -->
+<title>What You Want?</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<link rel="stylesheet" href="style.css">
 
-        body{
-            background:#000;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            font-family:"PP Neue Montreal", sans-serif;
-        }
+<!-- Load PP Neue Montreal -->
+<!--
+<link rel="stylesheet" href="fonts/pp-neue-montreal.css">
+-->
 
-        .text{
-            color:#fff;
-            line-height:0.9;
-        }
-
-        .small{
-            font-size:30px;
-            font-weight:300;
-            letter-spacing:0.08em;
-            text-transform:uppercase;
-            display:block;
-            margin-left:2px;
-        }
-
-        .large{
-            font-size:120px;
-            font-weight:300;
-            letter-spacing:-0.05em;
-            display:block;
-        }
-    </style>
 </head>
+
 <body>
 
-    <div class="text">
-        <span class="small">DO</span>
-        <span class="large">More.</span>
-    </div>
+<div class="container">
+
+    <h1>What you want ?</h1>
+
+    <form class="search-box">
+
+        <input
+            type="text"
+            placeholder="Type something..."
+        >
+
+        <button type="submit">
+            Submit
+        </button>
+
+    </form>
+
+</div>
 
 </body>
 </html>
