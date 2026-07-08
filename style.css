@@ -1,7 +1,15 @@
+/* ===================================
+   RESET
+=================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -9,67 +17,122 @@ body{
     background:#000;
     color:#fff;
 
+    font-family:"PP Neue Montreal","Helvetica Neue",Arial,sans-serif;
+
+    overflow-x:hidden;
+}
+
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero{
+
     width:100%;
-    height:100vh;
+    min-height:100vh;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    font-family:"PP Neue Montreal",sans-serif;
+    padding:40px 20px;
 }
+
+
+/* ===================================
+   CONTAINER
+=================================== */
 
 .container{
 
-    width:min(900px,90%);
+    width:min(1320px,90%);
 }
+
+
+/* ===================================
+   TITLE
+=================================== */
 
 .container h1{
 
-    font-size:82px;
     font-weight:200;
-    line-height:1;
-    letter-spacing:-3px;
 
-    margin-bottom:12px;
+    font-size:clamp(52px,8vw,120px);
+
+    letter-spacing:-0.06em;
+
+    line-height:.95;
+
+    margin-bottom:35px;
 }
+
+.container h1 span{
+
+    font-weight:200;
+}
+
+
+/* ===================================
+   SEARCH BOX
+=================================== */
 
 .search-box{
 
     width:100%;
-    height:78px;
 
-    border:2px solid rgba(255,255,255,.9);
-
-    border-radius:50px;
+    height:110px;
 
     display:flex;
+
     align-items:center;
 
-    padding:0 10px 0 24px;
+    padding:12px;
+
+    border:2px solid rgba(255,255,255,.85);
+
+    border-radius:80px;
 
     transition:.35s;
 }
 
 .search-box:hover{
 
-    border-color:#ffffff;
-    box-shadow:0 0 25px rgba(255,255,255,.08);
+    border-color:#fff;
 }
+
+.search-box:focus-within{
+
+    border-color:#fff;
+
+    box-shadow:0 0 35px rgba(255,255,255,.08);
+}
+
+
+/* ===================================
+   INPUT
+=================================== */
 
 .search-box input{
 
     flex:1;
 
-    height:100%;
+    width:100%;
 
-    background:none;
+    background:transparent;
+
     border:none;
+
     outline:none;
+
+    padding:0 30px;
 
     color:#fff;
 
-    font-size:36px;
+    font-size:clamp(24px,3vw,56px);
+
+    font-style:italic;
+
     font-weight:300;
 
     font-family:"PP Neue Montreal",sans-serif;
@@ -77,67 +140,185 @@ body{
 
 .search-box input::placeholder{
 
-    color:rgba(255,255,255,.25);
-    font-style:italic;
+    color:rgba(255,255,255,.18);
 }
+
+
+/* ===================================
+   BUTTON
+=================================== */
 
 .search-box button{
 
-    width:120px;
-    height:48px;
+    width:180px;
+
+    height:72px;
 
     border:none;
+
     border-radius:999px;
 
-    background:#ececec;
+    background:#ECECEC;
 
     color:#000;
 
     font-size:22px;
-    font-weight:500;
 
-    font-family:"PP Neue Montreal",sans-serif;
+    font-weight:500;
 
     cursor:pointer;
 
     transition:.3s;
+
+    flex-shrink:0;
+
+    font-family:"PP Neue Montreal",sans-serif;
 }
 
 .search-box button:hover{
 
     background:#fff;
 
-    transform:scale(1.04);
+    transform:scale(1.05);
 }
 
-.search-box:focus-within{
 
-    border-color:#fff;
-    box-shadow:0 0 30px rgba(255,255,255,.12);
+/* ===================================
+   STATUS
+=================================== */
+
+.status{
+
+    margin-top:18px;
+
+    color:#bdbdbd;
+
+    font-size:16px;
+
+    min-height:20px;
 }
 
-@media(max-width:768px){
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width:992px){
+
+.container{
+
+    width:94%;
+}
 
 .container h1{
 
-    font-size:58px;
+    font-size:72px;
 }
 
 .search-box{
 
-    height:66px;
+    height:90px;
+}
+
+.search-box button{
+
+    width:150px;
+
+    height:60px;
+
+    font-size:18px;
 }
 
 .search-box input{
+
+    font-size:34px;
+}
+
+}
+
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width:768px){
+
+.hero{
+
+    padding:24px;
+}
+
+.container{
+
+    width:100%;
+}
+
+.container h1{
+
+    font-size:52px;
+
+    margin-bottom:24px;
+
+    line-height:1;
+}
+
+.search-box{
+
+    height:auto;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    border-radius:32px;
+
+    padding:16px;
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:8px;
+
+    text-align:left;
 
     font-size:24px;
 }
 
 .search-box button{
 
-    width:95px;
-    height:42px;
+    width:100%;
+
+    height:54px;
+
+    font-size:18px;
+}
+
+}
+
+
+/* ===================================
+   SMALL MOBILE
+=================================== */
+
+@media (max-width:420px){
+
+.container h1{
+
+    font-size:42px;
+}
+
+.search-box input{
+
+    font-size:20px;
+}
+
+.search-box button{
+
+    height:50px;
 
     font-size:16px;
 }
+
 }
