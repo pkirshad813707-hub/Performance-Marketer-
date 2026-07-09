@@ -10,7 +10,14 @@
   <div class="wrap">
     <h1>What you want?</h1>
     <form id="promptForm">
-      <input type="text" id="promptInput" placeholder="Type something…" autocomplete="off">
+      <input
+        type="text"
+        id="promptInput"
+        name="message"
+        placeholder="Type something…"
+        autocomplete="off"
+        required
+      >
       <button type="submit">Submit</button>
     </form>
     <p id="statusMsg" class="status" role="status" aria-live="polite"></p>
