@@ -1,4 +1,5 @@
-/* Add your licensed PP Neu Montreal font files, then this will pick them up. */
+/* Add your licensed PP Neu Montreal font files inside a /fonts folder,
+   then this will pick them up automatically. Until then, fallbacks apply. */
 @font-face {
   font-family: 'PP Neu Montreal';
   src: url('fonts/PPNeueMontreal-Thin.woff2') format('woff2');
@@ -82,6 +83,8 @@ input[type="text"] {
   border: none;
   outline: none;
   box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
   color: var(--text);
   font-family: var(--font-main);
   font-size: clamp(1rem, 2.5vw, 1.4rem);
@@ -91,10 +94,11 @@ input[type="text"] {
 
 /* No border/outline change on focus, as requested */
 input[type="text"]:focus,
-input[type="text"]:focus-visible {
-  outline: none;
-  border: none;
-  box-shadow: none;
+input[type="text"]:focus-visible,
+input[type="text"]:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 input[type="text"]::placeholder {
