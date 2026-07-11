@@ -1,100 +1,53 @@
-/* =====================================================
-   RESET
-===================================================== */
+/* ==========================
+   MOBILE
+========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+@media (max-width:768px){
 
 body{
-
-    width:100%;
-    height:100vh;
-
     overflow:hidden;
-
-    background:#000;
-    color:#fff;
-
-    font-family:"PP Neue Montreal",sans-serif;
-
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-
 }
-
-/* =====================================================
-   HERO
-===================================================== */
 
 .hero{
 
-    width:100%;
-    height:100vh;
-
-    position:relative;
-
-    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
 }
 
-/* =====================================================
-   TYPOGRAPHY CONTAINER
-===================================================== */
-
 .text{
 
-    position:absolute;
-
-    right:4vw;
-    bottom:3vw;
+    position:static;
 
     display:flex;
     flex-direction:column;
 
-    align-items:flex-end;
+    align-items:center;
+
+    width:100%;
 
 }
-
-/* =====================================================
-   TYPOGRAPHY
-===================================================== */
 
 .text h1{
 
+    font-size:20vw;
+
+    line-height:.9;
+
+    letter-spacing:-0.05em;
+
     margin:0;
 
-    font-weight:200;
-
-    font-size:clamp(90px,8vw,180px);
-
-    line-height:.82;
-
-    letter-spacing:-0.07em;
-
-    white-space:nowrap;
-
-    transition:.3s;
-
 }
 
-/* =====================================================
-   INDIVIDUAL ALIGNMENTS
-===================================================== */
+/* Remove all desktop offsets */
 
-.no1{
-
-    margin-right:-1vw;
-
-}
-
-.no2{
+.no1,
+.no2,
+.nope,
+.and,
+.hell{
 
     margin-right:0;
 
@@ -102,220 +55,14 @@ body{
 
 .nope{
 
-    margin-right:8vw;
+    margin-top:6vw;
 
 }
 
 .and{
 
-    margin-right:3vw;
-
-}
-
-.hell{
-
-    margin-right:14vw;
-
-}
-
-/* =====================================================
-   LARGE DESKTOP
-===================================================== */
-
-@media(min-width:1700px){
-
-.text{
-
-right:5vw;
-bottom:4vw;
-
-}
-
-.text h1{
-
-font-size:7vw;
-
-}
-
-}
-
-/* =====================================================
-   DESKTOP
-===================================================== */
-
-@media(max-width:1400px){
-
-.text h1{
-
-font-size:8.5vw;
-
-}
-
-}
-
-/* =====================================================
-   LAPTOP
-===================================================== */
-
-@media(max-width:1200px){
-
-.text{
-
-right:40px;
-bottom:40px;
-
-}
-
-.text h1{
-
-font-size:9vw;
-
-}
-
-.nope{
-
-margin-right:9vw;
-
-}
-
-.and{
-
-margin-right:4vw;
-
-}
-
-.hell{
-
-margin-right:16vw;
-
-}
-
-}
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:992px){
-
-.text{
-
-right:30px;
-bottom:30px;
-
-}
-
-.text h1{
-
-font-size:14vw;
-
-line-height:.84;
-
-}
-
-.no1{
-
-margin-right:2vw;
-
-}
-
-.no2{
-
-margin-right:2vw;
-
-}
-
-.nope{
-
-margin-right:12vw;
-
-}
-
-.and{
-
-margin-right:5vw;
-
-}
-
-.hell{
-
-margin-right:18vw;
-
-}
-
-}
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:768px){
-
-.text{
-
-right:20px;
-bottom:20px;
-
-}
-
-.text h1{
-
-font-size:21vw;
-
-letter-spacing:-0.05em;
-
-line-height:.86;
-
-}
-
-.no1{
-
-margin-right:3vw;
-
-}
-
-.no2{
-
-margin-right:3vw;
-
-}
-
-.nope{
-
-margin-right:15vw;
-
-}
-
-.and{
-
-margin-right:6vw;
-
-}
-
-.hell{
-
-margin-right:22vw;
-
-}
-
-}
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media(max-width:430px){
-
-.text h1{
-
-font-size:23vw;
-
-}
-
-.text{
-
-right:15px;
-bottom:15px;
+    margin-top:4vw;
+    margin-bottom:4vw;
 
 }
 
