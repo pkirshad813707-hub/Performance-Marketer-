@@ -1,92 +1,322 @@
-body{
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
     background:#000;
     color:#fff;
-    overflow:hidden;
+
     font-family:"PP Neue Montreal",sans-serif;
+
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+
 }
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
-    width:100vw;
+
+    width:100%;
     height:100vh;
+
     position:relative;
+
     overflow:hidden;
+
 }
 
-/* Base */
+/* =====================================================
+   TYPOGRAPHY CONTAINER
+===================================================== */
 
-.line{
+.text{
+
     position:absolute;
-    font-weight:250;
-    line-height:.85;
+
+    right:4vw;
+    bottom:3vw;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-end;
+
+}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.text h1{
+
+    margin:0;
+
+    font-weight:200;
+
+    font-size:clamp(90px,8vw,180px);
+
+    line-height:.82;
+
+    letter-spacing:-0.07em;
+
     white-space:nowrap;
-    letter-spacing:-0.05em;
+
+    transition:.3s;
+
 }
 
-/* Desktop */
+/* =====================================================
+   INDIVIDUAL ALIGNMENTS
+===================================================== */
 
-.line1{
-    top:4%;
-    right:-2%;
-    font-size:9vw;
+.no1{
+
+    margin-right:-1vw;
+
 }
 
-.line2{
-    top:22%;
-    right:-1%;
-    font-size:9vw;
+.no2{
+
+    margin-right:0;
+
 }
 
-.line3{
-    top:46%;
-    right:8%;
-    font-size:10vw;
+.nope{
+
+    margin-right:8vw;
+
 }
 
-.line4{
-    top:62%;
-    right:1%;
-    font-size:9vw;
+.and{
+
+    margin-right:3vw;
+
 }
 
-.line5{
-    bottom:-1%;
-    right:14%;
-    font-size:9vw;
+.hell{
+
+    margin-right:14vw;
+
 }
 
-/* ---------------- MOBILE ---------------- */
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
 
-@media (max-width:768px){
+@media(min-width:1700px){
 
-.line1{
-    top:8%;
-    right:6%;
-    font-size:22vw;
+.text{
+
+right:5vw;
+bottom:4vw;
+
 }
 
-.line2{
-    top:24%;
-    right:6%;
-    font-size:22vw;
+.text h1{
+
+font-size:7vw;
+
 }
 
-.line3{
-    top:48%;
-    right:14%;
-    font-size:22vw;
 }
 
-.line4{
-    top:66%;
-    right:6%;
-    font-size:20vw;
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media(max-width:1400px){
+
+.text h1{
+
+font-size:8.5vw;
+
 }
 
-.line5{
-    bottom:4%;
-    right:18%;
-    font-size:20vw;
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media(max-width:1200px){
+
+.text{
+
+right:40px;
+bottom:40px;
+
+}
+
+.text h1{
+
+font-size:9vw;
+
+}
+
+.nope{
+
+margin-right:9vw;
+
+}
+
+.and{
+
+margin-right:4vw;
+
+}
+
+.hell{
+
+margin-right:16vw;
+
+}
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:992px){
+
+.text{
+
+right:30px;
+bottom:30px;
+
+}
+
+.text h1{
+
+font-size:14vw;
+
+line-height:.84;
+
+}
+
+.no1{
+
+margin-right:2vw;
+
+}
+
+.no2{
+
+margin-right:2vw;
+
+}
+
+.nope{
+
+margin-right:12vw;
+
+}
+
+.and{
+
+margin-right:5vw;
+
+}
+
+.hell{
+
+margin-right:18vw;
+
+}
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+.text{
+
+right:20px;
+bottom:20px;
+
+}
+
+.text h1{
+
+font-size:21vw;
+
+letter-spacing:-0.05em;
+
+line-height:.86;
+
+}
+
+.no1{
+
+margin-right:3vw;
+
+}
+
+.no2{
+
+margin-right:3vw;
+
+}
+
+.nope{
+
+margin-right:15vw;
+
+}
+
+.and{
+
+margin-right:6vw;
+
+}
+
+.hell{
+
+margin-right:22vw;
+
+}
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:430px){
+
+.text h1{
+
+font-size:23vw;
+
+}
+
+.text{
+
+right:15px;
+bottom:15px;
+
 }
 
 }
