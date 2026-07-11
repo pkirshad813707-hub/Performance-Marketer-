@@ -1,66 +1,245 @@
-/* ==========================
-   MOBILE
-========================== */
+/* ==========================================
+   RESET
+========================================== */
 
-@media (max-width:768px){
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#000;
+    color:#fff;
+
+    font-family:"PP Neue Montreal",sans-serif;
+
+    overflow-x:hidden;
 
 }
+
+/* ==========================================
+   HERO
+========================================== */
 
 .hero{
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    min-height:100dvh;
+
+    display:grid;
+    place-items:center;
+
+    padding:40px;
 
 }
 
-.text{
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
 
-    position:static;
+.text-wrap{
 
-    display:flex;
-    flex-direction:column;
+    display:grid;
 
-    align-items:center;
+    width:min(900px,90vw);
 
-    width:100%;
+    grid-template-columns:repeat(12,1fr);
 
-}
+    grid-template-rows:repeat(5,auto);
 
-.text h1{
-
-    font-size:20vw;
-
-    line-height:.9;
-
-    letter-spacing:-0.05em;
-
-    margin:0;
+    row-gap:1.2vw;
 
 }
 
-/* Remove all desktop offsets */
+.line{
 
-.no1,
-.no2,
-.nope,
-.and,
-.hell{
+    font-weight:200;
 
-    margin-right:0;
+    font-size:clamp(5rem,9vw,10rem);
 
-}
+    line-height:.82;
 
-.nope{
+    letter-spacing:-0.07em;
 
-    margin-top:6vw;
+    white-space:nowrap;
 
 }
 
-.and{
+/* Layout */
 
-    margin-top:4vw;
-    margin-bottom:4vw;
+.line1{
+
+    grid-column:8 / 13;
+    justify-self:end;
+
+}
+
+.line2{
+
+    grid-column:8 / 13;
+    justify-self:end;
+
+}
+
+.line3{
+
+    grid-column:6 / 13;
+    justify-self:end;
+
+}
+
+.line4{
+
+    grid-column:11 / 13;
+    justify-self:end;
+
+}
+
+.line5{
+
+    grid-column:4 / 13;
+    justify-self:end;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    position:fixed;
+
+    left:40px;
+    bottom:35px;
+
+}
+
+.footer h2{
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+
+}
+
+.footer p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    opacity:.7;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.hero{
+
+padding:30px;
+
+}
+
+.text-wrap{
+
+width:100%;
+
+row-gap:10px;
+
+}
+
+.line{
+
+font-size:clamp(4rem,13vw,8rem);
+
+}
+
+.footer{
+
+left:25px;
+bottom:25px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.hero{
+
+padding:20px;
+
+}
+
+.text-wrap{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-end;
+
+gap:5px;
+
+}
+
+.line{
+
+font-size:20vw;
+
+line-height:.85;
+
+}
+
+.footer{
+
+position:static;
+
+padding:30px 20px;
+
+}
+
+.footer h2{
+
+font-size:16px;
+
+}
+
+.footer p{
+
+font-size:13px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media(max-width:430px){
+
+.line{
+
+font-size:22vw;
 
 }
 
