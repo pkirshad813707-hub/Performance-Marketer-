@@ -2,51 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Jane Doe - Graphic Designer Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irshad PK | Performance Marketer</title>
-    <meta name="description"
-        content="Irshad PK | Performance Marketer based in Kochi, India.">
-    <!-- PP Neue Montreal -->
-    <link href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
-    <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: #f7f7fa; 
+            color: #222; 
+        }
+        header {
+            background: #252934;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #d1d1d1;
+        }
+        nav {
+            background: #222733;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #eaeaea;
+            text-decoration: none;
+            margin: 0 1.5em;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ff8f45;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .about {
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+        .portfolio {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin-bottom: 2rem;
+        }
+        .project {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+            transition: box-shadow 0.2s;
+        }
+        .project:hover {
+            box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+        }
+        .project img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+        .project-details {
+            padding: 1rem;
+        }
+        .project-details h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #252934;
+        }
+        .project-details p {
+            margin: 0.5rem 0 0 0;
+            color: #444950;
+            font-size: 1rem;
+        }
+        .contact {
+            text-align: center;
+            margin: 2rem 0 4rem 0;
+        }
+        .contact a, .contact button {
+            display: inline-block;
+            background: #ff8f45;
+            color: #fff;
+            border: none;
+            padding: 0.8em 2em;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .contact a:hover, .contact button:hover {
+            background: #d97425;
+        }
+        footer {
+            background: #252934;
+            color: #bbb;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.95rem;
+        }
+        @media (max-width:600px) {
+            .project img { height: 120px; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Background -->
-    <div class="background"></div>
-    <!-- Hero -->
-    <main class="hero">
-        <div class="text-wrap">
-            <h1 class="line line1">No</h1>
-            <h1 class="line line2">No</h1>
-            <h1 class="line line3">Nope</h1>
-            <h1 class="line line4">&</h1>
-            <h1 class="line line5">Hell Naw</h1>
-        </div>
-    </main>
-    <!-- Bottom Left -->
-    <div class="info">
-        <h2>IRSHAD PK</h2>
-        <p>Performance Marketer</p>
+    <header>
+        <h1>Jane Doe</h1>
+        <p>Creative Graphic Designer | Branding | Illustration | UI/UX</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm Jane Doe, a passionate graphic designer with over 6 years of experience creating bold brands, engaging illustrations, and delightful digital experiences.
+                My work blends a keen eye for detail with a love for modern, clean aesthetics.<br>
+                I'm always eager to collaborate and bring unique visual stories to life.
+            </p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio">
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Branding Project">
+                    <div class="project-details">
+                        <h3>Brand Identity: Leaf Co.</h3>
+                        <p>Developed an eco-conscious branding package for a plant-based company, including logo design, packaging, and digital assets.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Web Design Project">
+                    <div class="project-details">
+                        <h3>UI Design: Portfolio Template</h3>
+                        <p>Crafted a minimal yet engaging portfolio template tailored for artists and illustrators, focusing on usability and charm.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Illustration Project">
+                    <div class="project-details">
+                        <h3>Editorial Illustration Series</h3>
+                        <p>Produced a colorful illustration set for a digital magazine, receiving recognition for creative concept and execution.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="App UI/UX Project">
+                    <div class="project-details">
+                        <h3>App UI/UX: Travel Mate</h3>
+                        <p>Designed the app interface and micro-interactions for a travel planning app focused on seamless user journeys.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Let's collaborate on your next project!</p>
+            <a href="mailto:jane.doe@email.com">Email Me</a>
+            <a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a>
+            <a href="https://www.behance.net/yourusername" target="_blank">Behance</a>
+        </section>
     </div>
-    <!-- Social Icons -->
-    <div class="socials">
-        <a href="https://wa.me/918137072141"
-            target="_blank"
-            aria-label="WhatsApp">
-            <i class="ri-whatsapp-line"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/irshadpk-dm-manager-faircode/"
-            target="_blank"
-            aria-label="LinkedIn">
-            <i class="ri-linkedin-line"></i>
-        </a>
-        <a href="https://instagram.com/irshadpk.in"
-            target="_blank"
-            aria-label="Instagram">
-            <i class="ri-instagram-line"></i>
-        </a>
-    </div>
+    <footer>
+        &copy; 2024 Jane Doe. All rights reserved.
+    </footer>
 </body>
 </html>
