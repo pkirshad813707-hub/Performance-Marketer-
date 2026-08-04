@@ -1,6 +1,13 @@
-/* ==========================================
-   RESET
-========================================== */
+/* =====================================================
+   IRSHAD PK
+   Premium Landing Page
+   Part 1
+===================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
 
 *{
     margin:0;
@@ -12,14 +19,112 @@ html{
     scroll-behavior:smooth;
 }
 
+:root{
+
+    --bg:#020202;
+    --surface:#0b0b0b;
+
+    --white:#ffffff;
+
+    --text:#c7c7c7;
+
+    --blue:#2563ff;
+
+    --cyan:#00c8ff;
+
+    --border:rgba(255,255,255,.08);
+
+    --transition:.35s ease;
+
+}
+
 body{
 
-    font-family:"Geist",sans-serif;
-    background:#020202;
-    color:#ffffff;
+    font-family:'Inter',sans-serif;
 
-    overflow:hidden;
+    background:var(--bg);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
     position:relative;
+
+    min-height:100vh;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#050505;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1d4ed8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#2563ff;
+
+}
+
+/* Selection */
+
+::selection{
+
+    background:#2563ff;
+
+    color:#fff;
+
+}
+
+/* Links */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* Lists */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* Buttons */
+
+button{
+
+    font-family:inherit;
 
 }
 
@@ -30,12 +135,16 @@ body{
 .background{
 
     position:fixed;
+
     inset:0;
+
     z-index:-3;
 
     background:#020202;
 
 }
+
+/* Blue Aurora */
 
 .background::before{
 
@@ -43,28 +152,35 @@ body{
 
     position:absolute;
 
-    width:1100px;
-    height:1100px;
+    width:1200px;
 
-    right:-300px;
-    top:-220px;
+    height:1200px;
+
+    right:-350px;
+
+    top:-250px;
 
     border-radius:50%;
 
     background:
+
     radial-gradient(circle,
 
-    rgba(42,118,255,.95) 0%,
+    rgba(37,99,255,.95) 0%,
 
-    rgba(23,145,255,.80) 25%,
+    rgba(0,180,255,.75) 28%,
 
-    rgba(0,214,255,.35) 50%,
+    rgba(0,220,255,.35) 48%,
 
-    rgba(0,0,0,0) 75%);
+    rgba(0,0,0,0) 72%);
 
-    filter:blur(100px);
+    filter:blur(110px);
+
+    animation:aurora 12s ease-in-out infinite alternate;
 
 }
+
+/* Overlay */
 
 .background::after{
 
@@ -77,42 +193,44 @@ body{
     background:
 
     linear-gradient(
+
     90deg,
 
-    #020202 0%,
+    rgba(2,2,2,1) 0%,
 
-    #020202 45%,
+    rgba(2,2,2,1) 45%,
 
-    rgba(0,0,0,.4) 60%,
+    rgba(2,2,2,.8) 60%,
 
-    rgba(0,0,0,0) 100%);
+    rgba(2,2,2,.25) 100%
+
+    );
 
 }
 
-/* ==========================================
-   MOUSE GLOW
-========================================== */
+/* Mouse Glow */
 
 .mouse-glow{
 
     position:fixed;
 
     width:550px;
+
     height:550px;
 
     border-radius:50%;
-
-    pointer-events:none;
 
     background:
 
     radial-gradient(circle,
 
-    rgba(0,153,255,.15),
+    rgba(0,153,255,.18),
 
     transparent 70%);
 
-    filter:blur(70px);
+    filter:blur(90px);
+
+    pointer-events:none;
 
     transform:translate(-50%,-50%);
 
@@ -128,22 +246,23 @@ header{
 
     position:fixed;
 
-    top:0;
-    left:0;
-
     width:100%;
 
-    z-index:100;
+    top:0;
+
+    left:0;
+
+    z-index:999;
 
 }
 
 .navbar{
 
-    max-width:1400px;
+    width:min(1280px,92%);
 
     margin:auto;
 
-    padding:40px 60px;
+    padding:34px 0;
 
     display:flex;
 
@@ -155,15 +274,19 @@ header{
 
 .logo{
 
-    color:white;
-
-    text-decoration:none;
-
-    font-size:30px;
+    font-size:28px;
 
     font-weight:800;
 
     letter-spacing:-1px;
+
+    transition:var(--transition);
+
+}
+
+.logo:hover{
+
+    opacity:.8;
 
 }
 
@@ -171,25 +294,53 @@ header{
 
     display:flex;
 
-    gap:50px;
+    align-items:center;
+
+    gap:42px;
 
 }
 
 .nav-links a{
 
-    color:rgba(255,255,255,.85);
+    color:rgba(255,255,255,.78);
 
-    text-decoration:none;
+    font-size:16px;
 
-    font-size:18px;
+    transition:var(--transition);
 
-    transition:.3s;
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:1px;
+
+    background:#fff;
+
+    transition:var(--transition);
 
 }
 
 .nav-links a:hover{
 
     color:#fff;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
 
 }
 
@@ -211,309 +362,10 @@ header{
 
 .hero-content{
 
-    width:min(1300px,90%);
+    width:min(1280px,92%);
 
     margin:auto;
 
-}
-
-/* ==========================================
-   SMALL TEXT
-========================================== */
-
-.small-text{
-
-    display:inline-block;
-
-    color:#8d8d8d;
-
-    letter-spacing:3px;
-
-    font-size:14px;
-
-    margin-bottom:25px;
-
-}
-
-/* ==========================================
-   TITLE
-========================================== */
-
-h1{
-
-    font-size:clamp(90px,10vw,170px);
-
-    line-height:.88;
-
-    letter-spacing:-7px;
-
-    margin-bottom:35px;
-
-}
-
-.bold{
-
-    font-weight:900;
-
-}
-
-.light{
-
-    font-weight:300;
-
-}
-
-/* ==========================================
-   DESCRIPTION
-========================================== */
-
-.hero p{
-
-    width:700px;
-
-    max-width:100%;
-
-    color:#b8b8b8;
-
-    font-size:24px;
-
-    line-height:1.8;
-
-}
-
-.hero strong{
-
-    color:white;
-
-    font-weight:600;
-
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-.buttons{
-
-    margin-top:55px;
-
-    display:flex;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
-.primary-btn{
-
-    background:white;
-
-    color:black;
-
-    text-decoration:none;
-
-    padding:18px 38px;
-
-    border-radius:999px;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-.primary-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-
-    0 0 40px rgba(34,132,255,.35);
-
-}
-
-.secondary-btn{
-
-    border:1px solid rgba(255,255,255,.12);
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:18px 38px;
-
-    border-radius:999px;
-
-    backdrop-filter:blur(20px);
-
-    transition:.35s;
-
-}
-
-.secondary-btn:hover{
-
-    background:rgba(255,255,255,.05);
-
-}
-
-/* ==========================================
-   FOOTER
-========================================== */
-
-footer{
-
-    position:fixed;
-
-    bottom:40px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:90%;
-
-    text-align:center;
-
-}
-
-footer p{
-
-    color:#777;
-
-    font-size:15px;
-
-}
-
-/* ==========================================
-   ANIMATION
-========================================== */
-
-.hero-content{
-
-    animation:fadeUp .9s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width:992px){
-
-    body{
-
-        overflow:auto;
-
-    }
-
-    .navbar{
-
-        padding:30px;
-
-    }
-
-    h1{
-
-        font-size:clamp(72px,12vw,110px);
-
-        letter-spacing:-4px;
-
-    }
-
-    .hero p{
-
-        font-size:20px;
-
-    }
-
-}
-
-@media (max-width:768px){
-
-    .navbar{
-
-        flex-direction:column;
-
-        gap:25px;
-
-    }
-
-    .nav-links{
-
-        gap:25px;
-
-    }
-
-    .hero{
-
-        padding-top:120px;
-
-        align-items:flex-start;
-
-    }
-
-    h1{
-
-        font-size:62px;
-
-        line-height:.92;
-
-    }
-
-    .hero p{
-
-        font-size:18px;
-
-        line-height:1.7;
-
-    }
-
-    .buttons{
-
-        flex-direction:column;
-
-    }
-
-    .primary-btn,
-    .secondary-btn{
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
-    footer{
-
-        position:relative;
-
-        margin:60px 0 30px;
-
-        transform:none;
-
-        left:0;
-
-    }
+    padding-top:60px;
 
 }
