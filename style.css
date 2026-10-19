@@ -1,6 +1,7 @@
 
 :root {
   --bg: #080808;
+  --surface: #0d0d0d;
   --text: #f5f5f3;
   --muted: #666662;
   --line: #282828;
@@ -17,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 30px;
 }
 
 body {
@@ -25,6 +27,7 @@ body {
   font-family: var(--body);
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -53,6 +56,7 @@ button {
 .brand {
   font-family: var(--heading);
   font-size: 16px;
+  font-weight: 400;
   letter-spacing: -0.8px;
 }
 
@@ -69,8 +73,8 @@ button {
 .number,
 .response-label,
 .profile-label,
-footer,
-.disclaimer {
+.disclaimer,
+footer {
   font-size: 9px;
   letter-spacing: 1.2px;
 }
@@ -85,6 +89,8 @@ footer,
 footer {
   color: var(--muted);
 }
+
+/* HERO */
 
 .hero {
   min-height: 690px;
@@ -108,6 +114,7 @@ footer {
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
+  box-shadow: 0 0 12px #d5ff4540;
 }
 
 .hero h1 {
@@ -138,7 +145,7 @@ footer {
   padding: 15px 19px;
   font-size: 11px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
 }
 
 .start-button span {
@@ -151,9 +158,19 @@ footer {
   border-color: var(--accent);
 }
 
+.start-button:focus-visible,
+.answers button:focus-visible,
+.linkedin-button:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .hero-index {
   margin-top: 55px;
 }
+
+/* QUESTIONS */
 
 .questions {
   padding: 105px 10%;
@@ -187,6 +204,7 @@ footer {
   font-size: 12px;
   line-height: 1.9;
   margin-top: 15px;
+  max-width: 550px;
 }
 
 .answers {
@@ -203,7 +221,7 @@ footer {
   color: #aaa;
   font-size: 11px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
 .answers button:hover,
@@ -216,7 +234,7 @@ footer {
   margin-top: 35px;
   padding: 25px;
   border: 1px solid var(--line);
-  background: #0d0d0d;
+  background: var(--surface);
 }
 
 .response-label {
@@ -229,6 +247,24 @@ footer {
   line-height: 1.9;
   margin-top: 15px;
 }
+
+.response.updated {
+  animation: responseFade 0.3s ease;
+}
+
+@keyframes responseFade {
+  from {
+    opacity: 0.45;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LINKEDIN REVEAL */
 
 .reveal-section {
   padding: 120px 10%;
@@ -284,17 +320,19 @@ footer {
 .linkedin-button {
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   gap: 25px;
   background: var(--accent);
   color: #080808;
   padding: 15px 18px;
   font-size: 11px;
   white-space: nowrap;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s, background 0.25s;
 }
 
 .linkedin-button:hover {
   transform: translateY(-3px);
+  background: #e5ff88;
 }
 
 .linkedin-button span {
@@ -306,6 +344,8 @@ footer {
   font-size: 8px;
   letter-spacing: 0.5px;
 }
+
+/* FOOTER */
 
 footer {
   border-top: 1px solid var(--line);
@@ -320,6 +360,8 @@ footer {
 footer a:hover {
   color: var(--text);
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
   .topbar {
@@ -378,6 +420,10 @@ footer a:hover {
     padding: 19px;
   }
 
+  .reveal-section h2 {
+    font-size: clamp(60px, 13vw, 85px);
+  }
+
   .profile-card {
     flex-direction: column;
     align-items: flex-start;
@@ -386,11 +432,11 @@ footer a:hover {
 
   .linkedin-button {
     width: 100%;
-    justify-content: space-between;
   }
 
   footer {
     padding: 25px 7%;
+    gap: 15px;
   }
 }
 
@@ -402,6 +448,7 @@ footer a:hover {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
 }
