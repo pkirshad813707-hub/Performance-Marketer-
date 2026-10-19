@@ -1,0 +1,407 @@
+
+:root {
+  --bg: #080808;
+  --text: #f5f5f3;
+  --muted: #666662;
+  --line: #282828;
+  --accent: #d5ff45;
+  --heading: "Geist", sans-serif;
+  --body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  color: #080808;
+  background: var(--accent);
+}
+
+.topbar {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: var(--heading);
+  font-size: 16px;
+  letter-spacing: -0.8px;
+}
+
+.brand span {
+  font-size: 9px;
+  margin-left: 3px;
+  vertical-align: top;
+}
+
+.top-note,
+.eyebrow,
+.hero-index,
+.section-label,
+.number,
+.response-label,
+.profile-label,
+footer,
+.disclaimer {
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+.top-note,
+.hero-index,
+.section-label,
+.number,
+.response-label,
+.profile-label,
+.disclaimer,
+footer {
+  color: var(--muted);
+}
+
+.hero {
+  min-height: 690px;
+  min-height: min(790px, calc(100svh - 76px));
+  padding: 65px 10% 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.eyebrow {
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-family: var(--heading);
+  font-size: clamp(58px, 10vw, 132px);
+  font-weight: 300;
+  letter-spacing: -0.085em;
+  line-height: 0.98;
+  margin-top: 48px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.intro {
+  color: #999;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-top: 32px;
+}
+
+.start-button {
+  margin-top: 30px;
+  background: transparent;
+  border: 1px solid #414141;
+  color: var(--text);
+  padding: 15px 19px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.start-button span {
+  margin-left: 30px;
+}
+
+.start-button:hover {
+  background: var(--accent);
+  color: #080808;
+  border-color: var(--accent);
+}
+
+.hero-index {
+  margin-top: 55px;
+}
+
+.questions {
+  padding: 105px 10%;
+  border-top: 1px solid var(--line);
+}
+
+.section-label {
+  margin-bottom: 60px;
+}
+
+.question-card {
+  padding: 38px 0;
+  border-top: 1px solid var(--line);
+}
+
+.number {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.question-card h2 {
+  font-family: var(--heading);
+  font-size: clamp(32px, 5.5vw, 65px);
+  font-weight: 300;
+  letter-spacing: -0.065em;
+  line-height: 1.1;
+}
+
+.question-card p {
+  color: #898985;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 15px;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.answers button {
+  padding: 12px 15px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #aaa;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.answers button:hover,
+.answers button.selected {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.response {
+  margin-top: 35px;
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: #0d0d0d;
+}
+
+.response-label {
+  font-size: 8px;
+}
+
+.response p {
+  color: #d2d2ce;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-top: 15px;
+}
+
+.reveal-section {
+  padding: 120px 10%;
+  border-top: 1px solid var(--line);
+}
+
+.reveal-section h2 {
+  font-family: var(--heading);
+  font-weight: 300;
+  font-size: clamp(60px, 11vw, 140px);
+  letter-spacing: -0.085em;
+  line-height: 0.98;
+  margin-top: 45px;
+}
+
+.reveal-copy {
+  max-width: 420px;
+  margin-top: 30px;
+  color: #999;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.profile-card {
+  margin-top: 45px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.profile-label {
+  font-size: 8px;
+}
+
+.profile-info h3 {
+  font-family: var(--heading);
+  font-weight: 300;
+  font-size: 29px;
+  letter-spacing: -1px;
+  margin-top: 14px;
+}
+
+.profile-info p {
+  color: #888;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 8px;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  background: var(--accent);
+  color: #080808;
+  padding: 15px 18px;
+  font-size: 11px;
+  white-space: nowrap;
+  transition: transform 0.25s ease;
+}
+
+.linkedin-button:hover {
+  transform: translateY(-3px);
+}
+
+.linkedin-button span {
+  font-size: 17px;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 27px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 8px;
+}
+
+footer a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    height: 65px;
+    padding: 0 6%;
+  }
+
+  .top-note {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+  }
+
+  .hero {
+    min-height: 650px;
+    min-height: calc(100svh - 65px);
+    padding: 55px 7% 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(55px, 13vw, 80px);
+    margin-top: 40px;
+  }
+
+  .hero-index {
+    font-size: 8px;
+    letter-spacing: 0.7px;
+  }
+
+  .questions,
+  .reveal-section {
+    padding: 80px 7%;
+  }
+
+  .section-label {
+    margin-bottom: 40px;
+  }
+
+  .question-card {
+    padding: 30px 0;
+  }
+
+  .question-card h2 {
+    font-size: 39px;
+  }
+
+  .answers {
+    gap: 8px;
+  }
+
+  .answers button {
+    font-size: 10px;
+    padding: 11px 12px;
+  }
+
+  .response {
+    padding: 19px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .linkedin-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  footer {
+    padding: 25px 7%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
