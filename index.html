@@ -2,18 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080808" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
 
-  <title>Before You Proceed.</title>
-  <meta name="description" content="A few questions before you decide you know me." />
+  <title>Before You Proceed — Irshad</title>
+  <meta name="description" content="A few questions before you decide you know me.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -23,17 +25,21 @@
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow"><span class="dot"></span> YOU'VE ARRIVED. INTERESTING.</p>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <p class="eyebrow">
+        <span class="dot"></span>
+        YOU'VE ARRIVED. INTERESTING.
+      </p>
 
       <h1>
-        Before you<br />
-        <span class="muted">proceed,</span><br />
+        Before you<br>
+        <span class="muted">proceed,</span><br>
         a few questions.
       </h1>
 
       <p class="intro">
-        Nothing serious. Probably.<br />
+        Nothing serious. Probably.<br>
         Let's establish a few things first.
       </p>
 
@@ -41,16 +47,24 @@
         Ask me something <span>↓</span>
       </button>
 
-      <span class="hero-index">01 — PLEASE ANSWER HONESTLY. OR DON'T.</span>
+      <span class="hero-index">
+        01 — PLEASE ANSWER HONESTLY. OR DON'T.
+      </span>
     </section>
 
+    <!-- QUESTIONS -->
     <section class="questions" id="questions">
       <div class="section-label">THE QUESTIONABLE PART</div>
 
       <article class="question-card">
         <span class="number">01 /</span>
+
         <h2>What's your intention?</h2>
-        <p>Just browsing? Stalking? Researching? LinkedIn sent you here?</p>
+
+        <p>
+          Just browsing? Stalking? Researching?
+          LinkedIn sent you here?
+        </p>
 
         <div class="answers" data-question="intention">
           <button data-answer="Just curious.">Just curious.</button>
@@ -61,64 +75,88 @@
 
       <article class="question-card">
         <span class="number">02 /</span>
+
         <h2>Do you know who I really am?</h2>
-        <p>Or do you know the carefully curated version the internet has approved?</p>
+
+        <p>
+          Or do you know the carefully curated version
+          the internet has approved?
+        </p>
 
         <div class="answers" data-question="identity">
           <button data-answer="I think I do.">I think I do.</button>
           <button data-answer="Not really.">Not really.</button>
-          <button data-answer="Let's not get philosophical.">Let's not get philosophical.</button>
+          <button data-answer="Let's not get philosophical.">
+            Let's not get philosophical.
+          </button>
         </div>
       </article>
 
       <article class="question-card">
         <span class="number">03 /</span>
-        <h2>And what exactly are you expecting to find?</h2>
+
+        <h2>What exactly are you expecting to find?</h2>
+
         <p>A professional? A personality? A plot twist?</p>
 
         <div class="answers" data-question="expectation">
-          <button data-answer="Professional credentials.">Professional credentials.</button>
-          <button data-answer="Something unexpected.">Something unexpected.</button>
-          <button data-answer="Honestly, no idea.">Honestly, no idea.</button>
+          <button data-answer="Professional credentials.">
+            Professional credentials.
+          </button>
+          <button data-answer="Something unexpected.">
+            Something unexpected.
+          </button>
+          <button data-answer="Honestly, no idea.">
+            Honestly, no idea.
+          </button>
         </div>
       </article>
 
+      <!-- INTERACTIVE RESPONSE -->
       <div class="response" id="response" aria-live="polite">
-        <span class="response-label">YOUR ANSWERS HAVE BEEN NOTED. (NOT REALLY.)</span>
-        <p id="responseText">You've made it this far. That's either curiosity or a questionable use of your time.</p>
+        <span class="response-label">
+          YOUR ANSWERS HAVE BEEN NOTED. (NOT REALLY.)
+        </span>
+
+        <p id="responseText">
+          You've made it this far. That's either curiosity
+          or a questionable use of your time.
+        </p>
       </div>
     </section>
 
-    <section class="reveal-section">
+    <!-- REVEAL -->
+    <section class="reveal-section" id="about">
       <p class="eyebrow">04 — THE BIG REVEAL</p>
 
       <h2>
-        Anyway,<br />
+        Anyway,<br>
         <span class="muted">I'm Irshad.</span>
       </h2>
 
       <p class="reveal-copy">
-        A human being with a LinkedIn profile, professional ambitions,
-        and absolutely no obligation to explain this website.
+        A human being with a LinkedIn profile, professional
+        ambitions, and absolutely no obligation to explain
+        this website.
       </p>
 
       <div class="profile-card">
         <div class="profile-info">
-          <span class="profile-label">THE PUBLICLY AVAILABLE VERSION</span>
+          <span class="profile-label">
+            THE PUBLICLY AVAILABLE VERSION
+          </span>
+
           <h3>Irshad P K</h3>
-          <p>Digital Marketing · Ideas · Other questionable decisions</p>
+
+          <p>
+            Digital Marketing · Ideas · Other questionable decisions
+          </p>
         </div>
 
-        <a<a
-  class="linkedin-button"
-  href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Find me on LinkedIn <span>↗</span>
-</a>
+        <!-- REPLACE THE URL BELOW WITH YOUR LINKEDIN PROFILE -->
+        <a
           class="linkedin-button"
-          href=""
+          href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -137,7 +175,5 @@
     <span>YOU KNOW ENOUGH. MAYBE.</span>
     <a href="#top" id="backToTop">BACK TO THE QUESTIONS ↑</a>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
